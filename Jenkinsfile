@@ -34,7 +34,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push majesticteam47/react_demo:latest'
+                sh 'docker push majesticteam47/react_demo:latest .'
             }
         }
     }
