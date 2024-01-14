@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'test2'
-                sh 'docker build -t majesticteam47/nodedemo:latest .'
+                sh 'docker build -t majesticteam47/react_demo:latest .'
             }
         }
 
@@ -34,7 +34,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push majesticteam47/nodedemo:latest'
+                sh 'docker push majesticteam47/react_demo:latest'
             }
         }
     }
