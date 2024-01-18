@@ -17,7 +17,11 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'test2'
-                sh 'docker build -t majesticteam47/react_demo:latest .'
+        script {
+            // Increase the timeout value (e.g., from 10 minutes to 20 minutes)
+            timeout(time: 20, unit: 'MINUTES') {
+                docker.build("majesticteam47/react_demo:latest")
+            }
             }
         }
 
