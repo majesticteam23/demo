@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('SCM Checkout') {
             steps {
-                sh 'rm -rf nodedemo || true'  // Remove existing directory if it exists
+                sh 'rm -rf react_demo || true'  // Remove existing directory if it exists
                 sh 'git clone https://github.com/majesticteam23/demo.git'
                 echo 'test1'
             }
